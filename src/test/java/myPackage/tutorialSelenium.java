@@ -49,7 +49,7 @@ public class tutorialSelenium {
         Assert.assertEquals(currentURL, expectedURL, "Incorrect URL Test failed");
         //logout button is visible
         WebElement logoutButton = driver.findElement(By.xpath("//*[@id=\"content\"]/div/a"));
-        Assert.assertTrue();
+        //Assert.assertTrue();
 
         //success message
         WebElement successMessage = driver.findElement(By.id("flash"));
