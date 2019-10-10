@@ -30,10 +30,12 @@ public class tutorialSelenium {
         //enter username
         WebElement username = driver.findElement(By.id("username"));
         username.sendKeys("tomsmith");
+        sleep();
 
         //enter password
         WebElement password = driver.findElement(By.id("password"));
         password.sendKeys("SuperSecretPassword!");
+        sleep();
 
         //click login button
         WebElement clickButton = driver.findElement(By.className("radius"));
@@ -44,10 +46,10 @@ public class tutorialSelenium {
         //new url
         String expectedURL = "https://the-internet.herokuapp.com/secure";
         String currentURL = driver.getCurrentUrl();
-        Assert.assertEquals(currentURL, expectedURL, "Incorrect URL. Test failed");
+        Assert.assertEquals(currentURL, expectedURL, "Incorrect URL Test failed");
         //logout button is visible
         WebElement logoutButton = driver.findElement(By.xpath("//*[@id=\"content\"]/div/a"));
-
+        Assert.assertTrue();
 
         //success message
         WebElement successMessage = driver.findElement(By.id("flash"));
@@ -57,7 +59,7 @@ public class tutorialSelenium {
 
     private void sleep() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
